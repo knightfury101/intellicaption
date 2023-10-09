@@ -17,11 +17,11 @@ function getClient() {
 function createTranscriptionCommand(filename) {
   return new StartTranscriptionJobCommand({
     TranscriptionJobName: filename,
-    OutputBucketName: process.env.BUCKET_NAME,
+    OutputBucketName: process.env.AWS_NAME,
     OutputKey: filename + ".transcription",
     IdentifyLanguage: true,
     Media: {
-      MediaFileUri: "s3://" + process.env.BUCKET_NAME + "/" + filename,
+      MediaFileUri: "s3://" + process.env.AWS_NAME + "/" + filename,
     },
   });
 }
@@ -64,7 +64,7 @@ async function getTranscriptionFile(filename) {
     },
   });
   const getObjectCommand = new GetObjectCommand({
-    Bucket: process.env.BUCKET_NAME,
+    Bucket: process.env.AWS_NAME,
     Key: transcriptionFile,
   });
   let transcriptionFileResponse = null;
