@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# IntelliCaptions
 
-## Getting Started
+IntelliCaption is an AI-powered SaaS which is able to transcribe the video and put captions on it seamlessly.
 
-First, run the development server:
+## Introduction
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+IntelliCaptions is an innovative web app that leverages AI to automatically caption Instagram and YouTube shorts by uploading videos to AWS S3 where the Amazon Transcribe machine learning model identifies languages and generates captions. Users can customize the color, text, and outline of the captions before downloading the accessible, captioned video. Built with React, Next.js, TailwindCSS, and ffmpeg, IntelliCaptions delivers an easy-to-use interface that removes barriers for social media creators to reach wider audiences with AI-powered accessibility.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Functionality
+- Upload the files to a secured S3 bucket.
+- Let the Amazon Transcribe Model do its magic.
+- Change the color and outline color of captions.
+- Manually change the data, if the model fails.
+- Download the final output video.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Live Demo](https://intellicaption.vercel.app/)
